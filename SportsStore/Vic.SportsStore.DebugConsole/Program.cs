@@ -16,7 +16,7 @@ namespace Vic.SportsStore.DebugConsole
 
             using (var ctx = new EFDbContext())
             {
-                for (int i = 0; i < 30; i++)
+                for (int i = 0; i < 50; i++)
                 {
                     var product = new Product()
                     {
