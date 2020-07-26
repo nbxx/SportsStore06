@@ -14,7 +14,7 @@ namespace Vic.SportsStore.WebApp.Controllers
     {
         public IProductsRepository ProductsRepository { get; set; }
 
-        public const int PageSize = 5;
+        public const int PageSize = 3;
 
         public ViewResult List(int page = 1)
         {
