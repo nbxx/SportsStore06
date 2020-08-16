@@ -81,6 +81,7 @@
     <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\CartLine.cs" />
     <Compile Include="Entities\EmailSettings.cs" />
+    <Compile Include="Entities\LoginUser.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ShippingDetails.cs" />
     <Compile Include="Migrations\202007261959063_InitialCreate.cs" />
@@ -94,6 +95,10 @@
     <Compile Include="Migrations\202008162051530_ProductRev2.cs" />
     <Compile Include="Migrations\202008162051530_ProductRev2.designer.cs">
       <DependentUpon>202008162051530_ProductRev2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008162126265_AddLoginUsers.cs" />
+    <Compile Include="Migrations\202008162126265_AddLoginUsers.designer.cs">
+      <DependentUpon>202008162126265_AddLoginUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008162051530_ProductRev2.resx">
       <DependentUpon>202008162051530_ProductRev2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008162126265_AddLoginUsers.resx">
+      <DependentUpon>202008162126265_AddLoginUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

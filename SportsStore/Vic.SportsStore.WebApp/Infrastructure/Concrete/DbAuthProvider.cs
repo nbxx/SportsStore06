@@ -4,18 +4,24 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Web;
 using System.Web.Security;
+using Vic.SportsStore.Domain.Concrete;
 using Vic.SportsStore.WebApp.Infrastructure.Abstract;
 
 namespace Vic.SportsStore.WebApp.Infrastructure.Concrete
 {
     public class DbAuthProvider : IAuthProvider
     {
+        public EFDbContext Context { get; set; }
+
         public bool Authenticate(string username, string password)
         {
             bool result = false;
 
-            if (username.Equals("admin", StringComparison.OrdinalIgnoreCase)
-                && password.Equals("adminpwd", StringComparison.OrdinalIgnoreCase))
+            var loginUser = Context
+                .LoginUsers
+                .FirstOrDefault(x => x.Username == username && x.Password == password);
+
+            if (loginUser != null)
             {
                 result = true;
             }
